@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinitfolio | About Us</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <!-- Google tag (gtag.js) -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hamburger Menu for Mobile */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger-menu div {
+            width: 30px;
+            height: 4px;
+            background-color: #fff;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .hamburger-menu.active div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger-menu.active div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active div:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* About Section */
+        .about-section {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h1 {
+            font-size: 24px;
+            color: #28a745;
+        }
+
+        .about-section p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 15px;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .main-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Talents</div>
+        <nav>
+            <a href="https://infinitfolio.site">Home</a>
+            <a href="https://infinitfolio.site/blogs/posts">Posts</a>
+            <a href="https://infinitfolio.site/blogs">Blogs</a>
+        </nav>
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" onclick="toggleSidebar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="about-section">
+            <h1>About Us</h1>
+            <p>
+                At Infinitfolio, our vision is to empower small businesses with cutting-edge, affordable technology. We provide solutions ranging from simple online shops to advanced AI, automation, and robotics.
+            </p>
+            <p>
+                Our goal is to help businesses stand out, showcase their identity, and attract more customers while staying ahead of the competition.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Toggle sidebar visibility and hamburger menu shape
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const menu = document.querySelector('.hamburger-menu');
+
+            sidebar.classList.toggle('show');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
